@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Space Grotesk Bold';
+    src: url('../fonts/SpaceGrotesk-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/SpaceGrotesk-Regular.ttf');
+}
+
+h1 {
+    color: white;
+    font-family: 'Space Grotesk Bold';
+}
+
+p {
+    font-family: 'Space Grotesk';
+}
+
+button {
+    background-color: white;
+    color: #f4afcf;
+    font-size: medium;
+    border: none;
+    padding: 20px 50px;
+    cursor: pointer;
+    transition: padding .25s ease, border-radius .25s ease;
+}
+
+button:hover {
+    padding: 22px 52px;
+    border-radius: 20px;
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f4afcf;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#cta {
+    display: flex;
+    align-items: center;
+}
+
+.emoji {
+    font-size: calc(1px + 1vw);
+    min-width: 1.4em;
+    margin: 0.3em 0.4em;
+}
+
+.emoji::after {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.hearts::after {
+    content: '💗';
+    animation-name: hearts;
+    animation-duration: 2s;
+}
+
+@keyframes hearts {
+    16.666% {
+        content: '🧡';
+    }
+
+    33.333% {
+        content: '💛';
+    }
+
+    50% {
+        content: '💚';
+    }
+
+    66.666% {
+        content: '💙';
+    }
+
+    83.333% {
+        content: '💜';
+    }
+}
